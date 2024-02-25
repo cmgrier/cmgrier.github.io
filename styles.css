@@ -1,24 +1,71 @@
+/* Define the Bahnschrift font */
+@font-face {
+  font-family: 'Bahnschrift SemiCondensed';
+  src: local('Bahnschrift.ttf') format('ttf');
+  /* Add more font formats (e.g., woff2, ttf) if needed */
+  /* Specify font-weight and font-style if applicable */
+}
+
 body {
-  font-family: sans-serif; /* Choose a specific font like Roboto or Open Sans */
+  color: white;
+  font-family: Roboto; /* Choose a specific font like Roboto or Open Sans */
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: #121212;
+  width: fit-content;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 header {
-  background-color: #f2f2f2; /* Use a neutral base color */
+  height: 100vh;
+  color: white;
+  background-color: #121212;
   padding: 20px;
   text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.contact {
+  flex-direction: row;
+  display: flex;
+  align-content: center;
 }
 
 main {
   padding: 30px;
 }
 
-h1, h2, h3 {
-  font-weight: normal; /* Avoid overly bold headings */
-  margin-bottom: 10px;
+h1 {
+  font-family: 'Bahnschrift SemiCondensed';
   text-align: center;
+  font-size: 10vw;
+  line-height: normal;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+h3 {
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Bahnschrift';
+  font-size: 2vw;
+  animation: fadeIn 1s ease-in-out;
 }
 
 ul {
@@ -32,10 +79,47 @@ li {
 }
 
 a {
-  color: #007bff; /* Use your accent color */
-  text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    color: royalblue;
+    font-weight: 800;
+    text-decoration: underline;
+    overflow: hidden;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: width 275ms ease;
 }
+
+        /* Base styles for the anchor tag */
+        .neon-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 2vw;
+            font-weight: bold;
+            font-family: 'Bahnschrift';
+            text-align: center;
+            text-decoration: none;
+            border: 3px solid transparent;
+            border-radius: 100px;
+            color: white;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        /* Neon blue gradient border on hover */
+        .neon-button:hover {
+            border-image: linear-gradient(to right, #04d9ff, #5ee7ff);
+            border-image-slice: 1;
+            color: #04d9ff;
+        }
