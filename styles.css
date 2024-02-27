@@ -43,6 +43,18 @@ header {
   border-radius: 16px;
 }
 
+section {
+  min-height: 110vh;
+  width: 100vw;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 .contact {
   flex-direction: row;
   display: flex;
@@ -56,9 +68,59 @@ main {
 h1 {
   font-family: 'Bahnschrift SemiCondensed';
   text-align: center;
-  font-size: 15vw;
+  font-size: 30vh;
   line-height: normal;
   margin: 0px;
+}
+
+h2 {
+  width: 65vw;
+  text-align: center;
+  font-family: 'Bahnschrift';
+  font-size: 10vh;
+}
+
+h3 {
+  width: 50vw;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Bahnschrift';
+  font-size: 5vh;
+  align-self: center;
+}
+
+h4 {
+  width: 45vw;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Bahnschrift';
+  font-size: 3vh;
+  align-self: center;
+}
+
+p {
+  width: 45vw;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Bahnschrift';
+  font-size:  2vh;
+  align-self: center;
+}
+
+ul {
+  width: 45vw;
+  align-self: center;
+  list-style: none;
+  text-align: left;
+  font-family: 'Bahnschrift';
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-align: left;
+  font-family: 'Bahnschrift';
+  margin-bottom: 5px;
 }
 
 @keyframes fadeIn {
@@ -70,66 +132,25 @@ h1 {
   }
 }
 
-h3 {
-  margin-bottom: 10px;
-  text-align: left;
+/* Base styles for the anchor tag */
+.neon-button {
+  width: 45vw;
+  align-self: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2vh;
+  font-weight: bold;
   font-family: 'Bahnschrift';
-  font-size: 2vw;
-  animation: fadeIn 1s ease-in-out;
+  text-align: left;
+  text-decoration: underline .2vh transparent;
+  text-underline-offset: 0;
+  color: white;
+  transition: text-decoration-color 0.3s, color 0.3s, text-underline-offset 0.3s;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Neon blue gradient border on hover */
+.neon-button:hover {
+  color: #04d9ff;
+  text-decoration-color: #04d9ff;
+  text-underline-offset: .3vh;
 }
-
-li {
-  margin-bottom: 5px;
-}
-
-a {
-    position: relative;
-    display: inline-block;
-    font-size: 2em;
-    color: royalblue;
-    font-weight: 800;
-    text-decoration: underline;
-    overflow: hidden;
-}
-
-a:hover::before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: width 275ms ease;
-}
-
-        /* Base styles for the anchor tag */
-        .neon-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 2vw;
-            font-weight: bold;
-            font-family: 'Bahnschrift';
-            text-align: center;
-            text-decoration: none;
-            border: 3px solid transparent;
-            border-radius: 100px;
-            color: white;
-            transition: border-color 0.3s, color 0.3s;
-        }
-
-        /* Neon blue gradient border on hover */
-        .neon-button:hover {
-            border-image: linear-gradient(to right, #04d9ff, #5ee7ff);
-            border-image-slice: 1;
-            color: #04d9ff;
-        }
