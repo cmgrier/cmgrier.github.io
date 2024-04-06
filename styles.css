@@ -41,6 +41,13 @@ header {
   background-color: #121212CC;
   padding: 8px;
   border-radius: 16px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 section {
@@ -83,7 +90,7 @@ h2 {
 h3 {
   width: 50vw;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
   font-family: 'Bahnschrift';
   font-size: 5vh;
   align-self: center;
@@ -134,7 +141,6 @@ li {
 
 /* Base styles for the anchor tag */
 .neon-button {
-  width: 45vw;
   align-self: center;
   display: inline-block;
   padding: 10px 20px;
