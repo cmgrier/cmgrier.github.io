@@ -2,161 +2,130 @@
 @font-face {
   font-family: 'Bahnschrift SemiCondensed';
   src: local('Bahnschrift.ttf') format('ttf');
-  /* Add more font formats (e.g., woff2, ttf) if needed */
-  /* Specify font-weight and font-style if applicable */
 }
 
 body {
   color: white;
-  font-family: Roboto; /* Choose a specific font like Roboto or Open Sans */
+  font-family: Roboto, sans-serif; /* Add fallback font */
   margin: 0;
   padding: 0;
   text-align: center;
   background-color: #121212;
-  width: 100vw;
-  align-content: center;
+  width: 100%; /* Use percentage instead of vw */
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
 }
 
 header {
-  height: 100vh;
-  width: 100vw;
+  min-height: 80vh; /* Adjust header height, min-height is better than fixed height */
+  width: 100%; /* Use percentage instead of vw */
   color: white;
   background-image: url(Circles.svg);
   background-size: cover;
   padding: 20px;
   text-align: center;
-  align-content: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
+  justify-content: center;
 }
 
 .titleBackground {
   background-color: #121212CC;
-  padding: 8px;
+  padding: 16px; /* Increase padding for touch */
   border-radius: 16px;
   text-align: center;
-  align-content: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
+  margin: 20px auto; /* Add margin for spacing */
+  max-width: 90%; /* prevent title background from becoming too large on wide screens. */
 }
 
 section {
-  min-height: 110vh;
-  width: 100vw;
+  padding: 20px;
+  width: 100%; /* Use percentage instead of vw */
   text-align: center;
-  align-content: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-.contact {
-  flex-direction: row;
-  display: flex;
-  align-content: center;
-}
-
-main {
-  padding: 30px;
 }
 
 h1 {
   font-family: 'Bahnschrift SemiCondensed';
-  text-align: center;
-  font-size: 30vh;
-  line-height: normal;
-  margin: 0px;
+  font-size: 4em; /* Use em or rem for responsive font sizes */
+  line-height: 1.2;
+  margin: 20px 0;
 }
 
 h2 {
-  width: 65vw;
-  text-align: center;
-  font-family: 'Bahnschrift';
-  font-size: 10vh;
+  font-size: 2.5em; /* Use em or rem for responsive font sizes */
+  margin: 20px auto; /* Center with auto margins */
+  max-width: 90%;
 }
 
 h3 {
-  width: 50vw;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: 'Bahnschrift';
-  font-size: 5vh;
-  align-self: center;
+  font-size: 1.8em; /* Use em or rem for responsive font sizes */
+  margin: 15px auto;
+  max-width: 90%;
 }
 
 h4 {
-  width: 45vw;
-  margin-bottom: 10px;
+  font-size: 1.2em; /* Use em or rem for responsive font sizes */
+  margin: 10px auto;
+  max-width: 90%;
   text-align: left;
-  font-family: 'Bahnschrift';
-  font-size: 3vh;
-  align-self: center;
 }
 
-p {
-  width: 45vw;
-  margin-bottom: 10px;
+p, li {
+  font-size: 1em; /* Use em or rem for responsive font sizes */
+  margin: 10px auto;
+  max-width: 90%;
   text-align: left;
-  font-family: 'Bahnschrift';
-  font-size:  2vh;
-  align-self: center;
 }
 
 ul {
-  width: 45vw;
-  align-self: center;
   list-style: none;
-  text-align: left;
-  font-family: 'Bahnschrift';
   padding: 0;
-  margin: 0;
-}
-
-li {
+  margin: 10px auto;
+  max-width: 90%;
   text-align: left;
-  font-family: 'Bahnschrift';
-  margin-bottom: 5px;
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-/* Base styles for the anchor tag */
 .neon-button {
-  align-self: center;
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 2vh;
+  padding: 12px 24px; /* Increase padding for touch */
+  font-size: 1em; /* Use em or rem for responsive font sizes */
   font-weight: bold;
-  font-family: 'Bahnschrift';
-  text-align: left;
-  text-decoration: underline .2vh transparent;
+  text-decoration: underline 0.2em transparent;
   text-underline-offset: 0;
   color: white;
   transition: text-decoration-color 0.3s, color 0.3s, text-underline-offset 0.3s;
+  margin: 10px;
 }
 
-/* Neon blue gradient border on hover */
 .neon-button:hover {
   color: #04d9ff;
   text-decoration-color: #04d9ff;
-  text-underline-offset: .3vh;
+  text-underline-offset: 0.3em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    min-height: auto; /* Allow header to shrink on smaller screens */
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4, p, li {
+    font-size: 1em;
+  }
+  .neon-button{
+    font-size: 1em;
+    padding: 10px 20px;
+  }
 }
