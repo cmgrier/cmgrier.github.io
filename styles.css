@@ -50,34 +50,34 @@ section {
 
 h1 {
   font-family: 'Bahnschrift SemiCondensed';
-  font-size: 4em; /* Use em or rem for responsive font sizes */
+  font-size: 6em; /* Use em or rem for responsive font sizes */
   line-height: 1.2;
   margin: 20px 0;
 }
 
 h2 {
-  font-size: 2.5em; /* Use em or rem for responsive font sizes */
-  margin: 20px auto; /* Center with auto margins */
-  max-width: 90%;
+  font-size: 2.5em;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust as needed */
 }
 
 h3 {
-  font-size: 1.8em; /* Use em or rem for responsive font sizes */
+  font-size: 1.8em;
   margin: 15px auto;
-  max-width: 90%;
+  max-width: 800px; /* Adjust as needed */
 }
 
 h4 {
-  font-size: 1.2em; /* Use em or rem for responsive font sizes */
+  font-size: 1.2em;
   margin: 10px auto;
-  max-width: 90%;
+  max-width: 800px; /* Adjust as needed */
   text-align: left;
 }
 
 p, li {
-  font-size: 1em; /* Use em or rem for responsive font sizes */
+  font-size: 1em;
   margin: 10px auto;
-  max-width: 90%;
+  max-width: 800px; /* Adjust as needed */
   text-align: left;
 }
 
@@ -85,7 +85,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 10px auto;
-  max-width: 90%;
+  max-width: 800px; /* Adjust as needed */
   text-align: left;
 }
 
