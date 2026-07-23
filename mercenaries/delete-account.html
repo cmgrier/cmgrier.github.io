@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete Your Account — Mercenaries</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1e21;
+    --muted: #5c6169;
+    --accent: #7a3b2e;
+    --band: #1a1614;
+    --band-fg: #f3ede4;
+    --rule: #e6e2db;
+    --card: #faf8f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14110f;
+      --fg: #ece7df;
+      --muted: #9c968c;
+      --accent: #d08a5e;
+      --band: #0d0b0a;
+      --band-fg: #f3ede4;
+      --rule: #2a2521;
+      --card: #1c1815;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .band { background: var(--band); color: var(--band-fg); padding: 28px 24px; }
+  .band .inner { max-width: 720px; margin: 0 auto; }
+  .band .game { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .band h1 { margin: 6px 0 0; font-size: 26px; font-weight: 700; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  h2 { font-size: 19px; margin: 34px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  p, li { color: var(--fg); }
+  a { color: var(--accent); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 20px; margin: 20px 0; }
+  .cta { display: inline-block; margin-top: 6px; background: var(--accent); color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; }
+  .muted { color: var(--muted); }
+  code { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 1px 5px; font-size: 90%; }
+  footer { max-width: 720px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; }
+  @font-face {
+    font-family: "Cinzel";
+    src: url("Cinzel.ttf") format("truetype");
+    font-weight: 400 900;
+    font-display: swap;
+  }
+  .band .game, .band h1, h2 {
+    font-family: "Cinzel", Georgia, "Times New Roman", serif;
+  }
+  .band h1 { font-weight: 600; letter-spacing: .02em; }
+</style>
+</head>
+<body>
+  <div class="band">
+    <div class="inner">
+      <div class="game">Mercenaries</div>
+      <h1>Delete Your Account</h1>
+    </div>
+  </div>
+
+  <main>
+    <p class="updated">Last updated: July 22, 2026</p>
+
+    <p>You can ask us to delete your Mercenaries account and the data associated with
+      it at any time. This page explains what gets deleted and how to request it.</p>
+
+    <h2>How to request deletion</h2>
+    <p>Email us from the address you use to sign in to Mercenaries, so we can verify
+      the request:</p>
+    <div class="card">
+      <p style="margin:0 0 4px"><strong>Email:</strong>
+        <a href="mailto:beardedbeardeveloper@gmail.com?subject=Mercenaries%20account%20deletion%20request">beardedbeardeveloper@gmail.com</a></p>
+      <p class="muted" style="margin:0 0 12px">Subject: “Mercenaries account deletion request”</p>
+      <a class="cta" href="mailto:beardedbeardeveloper@gmail.com?subject=Mercenaries%20account%20deletion%20request&amp;body=Please%20delete%20my%20Mercenaries%20account%20and%20all%20associated%20data.%20This%20request%20is%20sent%20from%20my%20account%20email%20address.">Email a deletion request</a>
+    </div>
+    <p>We’ll confirm by reply and complete the deletion within 30 days.</p>
+
+    <h2>What gets deleted</h2>
+    <p>Deleting your account permanently removes, from our servers:</p>
+    <ul>
+      <li>Your account identifier and sign-in details (including your email address and any linked Google/Apple identity).</li>
+      <li>Your username (display name).</li>
+      <li>Your cloud-saved game — decks, campaign progress, and statistics.</li>
+    </ul>
+    <p>This action is permanent and cannot be undone.</p>
+
+    <h2>What stays on your device</h2>
+    <p>Mercenaries keeps a local copy of your progress on your device so you can play
+      offline. Deleting your account does not erase that local copy. To remove it,
+      clear the app’s data or uninstall the game on your device.</p>
+
+    <h2>Playing without an account</h2>
+    <p>If you never signed in, we hold no account or data for you to delete — your
+      progress exists only on your device. Clearing the app’s data or uninstalling
+      removes it.</p>
+
+    <h2>Related</h2>
+    <p>See our <a href="privacy.html">Privacy Policy</a> for the full picture of what
+      data the game handles and why.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:beardedbeardeveloper@gmail.com">beardedbeardeveloper@gmail.com</a></p>
+  </main>
+
+  <footer>
+    Mercenaries — Bearded Bear Studios.
+  </footer>
+</body>
+</html>

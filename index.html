@@ -3,82 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chris Grier</title>
-  <link rel="stylesheet" href="styles.css"> </head>
+  <title>Chris Grier — Senior Android Developer</title>
+  <meta name="description" content="Chris Grier — Senior Android Developer building design systems and reusable UI at scale.">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
 <body>
-  <header>
-    <div class="titleBackground">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="brand">Chris Grier<span class="dot">.</span></span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="mailto:chrisgrier1998@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Senior Android Developer</p>
       <h1>Chris Grier</h1>
-      <h3>Android Developer</h3>
-      <a href="mailto:chrisgrier1998@gmail.com" class="neon-button">Email</a>
-      <a href="https://www.linkedin.com/in/cmgrier" class="neon-button">LinkedIn</a>
-      <a href="https://github.com/cmgrier" class="neon-button">Github</a>
+      <p class="tag">I build Android apps and the design systems behind them — reusable UI, server-driven experiences, and the tooling that keeps large apps consistent.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:chrisgrier1998@gmail.com">Get in touch</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/cmgrier" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/cmgrier" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
-  <section>
-    <h2>About Me</h2>
 
-    <h3>Interests</h3>
-    <h4>Home Automation</h4>
-    <p>Creating custom and private Home Automation using Home Assistant</p>
-    <h4>Collaborative Storytelling</h4>
-    <p>Embarking on weekly quests with friends in the fantastical realms of tabletop role-playing games (TTRPGs).</p>
-    <h4>Board Game Marathons</h4>
-    <p>Conquering challenges and strategizing with friends during epic board game weekends.</p>
-    <h4>Culinary Creativity</h4>
-    <p>Experimenting in the kitchen and whipping up delicious (and sometimes disastrous) dishes.</p>
-  </section>
-  <section>
-    <h3>Skills</h3>
-    <h4>Android Development</h4>
-    <p>Xml/Jetpack Compose UI</p>
-    <p>MVI</p>
-    <p>State Management</p>
-    <p>Server Driven UI</p>
-    <p>Design Token Systems</p>
-    <p>UI Accessibility</p>
+  <main>
 
-    <h4>Agile Software Development</h4>
-    <p>Scrum Ceremonies</p>
-    <p>Teamwork and Collaboration</p>
-    <p>Estimation and Delivery</p>
-    <p>Project Lead</p>
+    <!-- About -->
+    <section id="about">
+      <div class="container reveal">
+        <p class="kicker">About</p>
+        <h2 class="section-title">A bit about me</h2>
+        <p class="lead">Senior Android Developer at Wayfair, focused on design systems, reusable
+          components, and platform engineering — building the pieces that let many apps stay
+          consistent and ship faster. Away from the keyboard, I'm usually deep in a project or a game.</p>
 
-    <h4>Programming Languages</h4>
-    <p>Kotlin</p>
-    <p>Java</p>
-    <p>Python</p>
-    <p>C#</p>
-    <p>HTML/CSS</p>
-  </section>
-  <section>
-    <h2>Experience</h2>
-    <h3>Wayfair - Senior Android Developer</h3>
-    <h4>Role and Responsibilities</h4>
-    <p>Created and maintained a Design System library of reusable UI Components built in both traditional XML and modern Jetpack Compose supporting several applications including Wayfair’s Android Storefront Application.</p>
-    <p>Platform engineer pioneering Wayfair's replatforming onto a CMS (Content Management System) building reusable components powered by GraphQL</p>
-    <p>Volunteered to be a rotational on-call Release Engineer who is responsible for releasing the storefront applications to the play store and monitoring the release for bugs and crashes.</p>
-    <p>Contributed documentation, training videos, presentations, and training exercises on Jetpack Compose, reusable component development, Large Screen Device Support, Responsive Layouts, and many more topics.</p>
-    <p>Team’s resident AI and process champion, implementing slack workflows to help organize and track inbound requests as well as participating in a hackathon where I trained an image ML model to identify our reusable components.</p>
+        <div class="grid interests-grid">
+          <div class="card interest"><h4>Home Automation</h4><p>Building custom, private home automation with Home Assistant.</p></div>
+          <div class="card interest"><h4>Collaborative Storytelling</h4><p>Weekly quests with friends in the fantastical realms of tabletop RPGs.</p></div>
+          <div class="card interest"><h4>Board Game Marathons</h4><p>Strategizing and conquering challenges over epic board-game weekends.</p></div>
+          <div class="card interest"><h4>Culinary Creativity</h4><p>Experimenting in the kitchen with delicious — and sometimes disastrous — dishes.</p></div>
+        </div>
+      </div>
+    </section>
 
-  </section>
-  <section>
-    <h2>Education</h2>
-    <h3>Worcester Polytechnic Institute</h3>
-    <h4>Bachelors in Robotics Engineering</h4>
-    <h4>Graduated Spring 2020</h4>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container reveal">
+        <p class="kicker">Skills</p>
+        <h2 class="section-title">What I work with</h2>
+        <div class="grid skills-grid">
+          <div class="card">
+            <h3><span class="num">01</span>Android Development</h3>
+            <div class="chips">
+              <span class="chip">XML / Jetpack Compose UI</span>
+              <span class="chip">MVI</span>
+              <span class="chip">State Management</span>
+              <span class="chip">Server-Driven UI</span>
+              <span class="chip">Design Token Systems</span>
+              <span class="chip">UI Accessibility</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3><span class="num">02</span>Agile Delivery</h3>
+            <div class="chips">
+              <span class="chip">Scrum Ceremonies</span>
+              <span class="chip">Teamwork &amp; Collaboration</span>
+              <span class="chip">Estimation &amp; Delivery</span>
+              <span class="chip">Project Lead</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3><span class="num">03</span>Languages</h3>
+            <div class="chips">
+              <span class="chip">Kotlin</span>
+              <span class="chip">Java</span>
+              <span class="chip">Python</span>
+              <span class="chip">C#</span>
+              <span class="chip">HTML / CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h4>BeachBots Major Qualifying Project</h4>
-    <p>Autonomous Robot Swarm to clean beaches of trash and debris. Project is still in development.</p>
-    <a href="https://digital.wpi.edu/concern/student_works/6q182n70t?locale=en" class="neon-button">Report</a>
-  </section>
-  <section>
-    <h2>Projects In Development</h2>
-    <h3>Restaurant Logger</h3>
-    <p>Mobile App that helps users record, rate, and rank restuarants they have visited.</p>
-    <a href="restaurantlogger/privacypolicy.html" target="_blank" class="neon-button">Privacy Policy</a>
-    <h3>The Leftovers</h3>
-    <p>A strategy board game where players play as different food groups.<br />Players will research recipes, build unique buildings, and battle others to earn Flavor Points and become the ruler of Groceria</p>
-  </section>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container reveal">
+        <p class="kicker">Experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+        <div class="card entry">
+          <p class="role">Senior Android Developer</p>
+          <p class="org">Wayfair</p>
+          <p class="meta">Role &amp; responsibilities</p>
+          <ul class="bullets">
+            <li>Created and maintained a design-system library of reusable UI components in both traditional XML and modern Jetpack Compose, supporting several applications including Wayfair's Android storefront.</li>
+            <li>Platform engineer pioneering Wayfair's replatforming onto a CMS, building reusable components powered by GraphQL.</li>
+            <li>Volunteered as a rotational on-call Release Engineer — releasing the storefront apps to the Play Store and monitoring releases for bugs and crashes.</li>
+            <li>Contributed documentation, training videos, presentations, and exercises on Jetpack Compose, reusable component development, large-screen support, responsive layouts, and more.</li>
+            <li>Team's resident AI and process champion — built Slack workflows to organize and track inbound requests, and trained an image ML model to identify our reusable components at a hackathon.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container reveal">
+        <p class="kicker">Education</p>
+        <h2 class="section-title">Where I studied</h2>
+        <div class="card entry">
+          <p class="role">B.S. in Robotics Engineering</p>
+          <p class="org">Worcester Polytechnic Institute</p>
+          <p class="meta">Graduated Spring 2020</p>
+          <ul class="bullets">
+            <li><strong>BeachBots</strong> — Major Qualifying Project: an autonomous robot swarm to clean beaches of trash and debris.</li>
+          </ul>
+          <div class="project" style="margin-top:16px">
+            <div class="links">
+              <a href="https://digital.wpi.edu/concern/student_works/6q182n70t?locale=en" target="_blank" rel="noopener">Read the report →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container reveal">
+        <p class="kicker">Projects</p>
+        <h2 class="section-title">Things I'm building</h2>
+        <div class="grid projects-grid">
+
+          <div class="card project">
+            <span class="badge">In development</span>
+            <h3>Mercenaries</h3>
+            <p>A dark-fantasy mobile card-battler built in Godot — recruit a warband, master your deck, and duel other players online.</p>
+            <div class="links">
+              <a href="mercenaries/" target="_blank" rel="noopener">Learn more →</a>
+              <a href="mercenaries/privacy.html" target="_blank" rel="noopener">Privacy</a>
+            </div>
+          </div>
+
+          <div class="card project">
+            <span class="badge">In development</span>
+            <h3>The Leftovers</h3>
+            <p>A strategy board game where players play as different food groups — research recipes, build unique buildings, and battle to earn Flavor Points and rule Groceria.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-links">
+        <a href="mailto:chrisgrier1998@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/cmgrier" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/cmgrier" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Chris Grier</p>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Progressive scroll-reveal (content is fully visible without JS)
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
