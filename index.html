@@ -10,10 +10,13 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
       <span class="brand">Chris Grier<span class="dot">.</span></span>
-      <div class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
@@ -180,6 +183,17 @@
   <script>
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Mobile nav toggle
+    const nav = document.getElementById('nav');
+    const toggle = nav.querySelector('.nav-toggle');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
     // Progressive scroll-reveal (content is fully visible without JS)
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }

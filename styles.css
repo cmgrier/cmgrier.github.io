@@ -75,7 +75,32 @@ a:hover { color: #7fecff; }
   background: var(--accent); transition: right .25s ease;
 }
 .nav-links a:hover::after { right: 0; }
-@media (max-width: 720px) { .nav-links { display: none; } }
+
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: 0; cursor: pointer; padding: 8px; margin: -8px -8px -8px 0;
+}
+.nav-toggle span {
+  display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+@media (max-width: 720px) {
+  .nav-toggle { display: inline-flex; }
+  .nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--bg-2); border-bottom: 1px solid var(--border);
+    padding: 6px 0; display: none;
+  }
+  .nav.open .nav-links { display: flex; }
+  .nav-links a { padding: 13px 24px; color: var(--text); }
+  .nav-links a:hover { background: var(--surface); }
+  .nav-links a::after { display: none; }
+}
 
 /* ---------- Hero ---------- */
 .hero {
